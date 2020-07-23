@@ -3,7 +3,7 @@ const baseURL = "https://ci-swapi.herokuapp.com/api/";
 function getData(cb) {
   var xhr = new XMLHttpRequest();
 
-  xhr.open("GET", baseURL + type);
+  xhr.open("GET", baseURL + type + "/");
 
   xhr.send();
 
@@ -15,7 +15,7 @@ function getData(cb) {
 }
 
 function writeToDocument(type) {
-    getData(type, function(data;) {
+    getData(type, function(data) {
         document.getElementById("data").innerHTML = data;
     })
 }
