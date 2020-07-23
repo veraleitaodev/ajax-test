@@ -15,6 +15,7 @@ function getData(type, cb) {
 
 function writeToDocument(type) {
     getData(type, function(data) {
+        console.dir(data);
         document.getElementById("data").innerHTML = data;
     });
 }
